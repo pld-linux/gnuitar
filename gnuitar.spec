@@ -9,10 +9,10 @@ Source0:	http://dl.sourceforge.net/gnuitar/%{name}-%{version}.tar.bz2
 # Source0-md5:	8b8375f879191c6c35bd30160f158d7c
 Patch0:		%{name}-am.patch
 URL:		http://ns2.ziet.zhitomir.ua/~fonin/downloads.php#gnuitar
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a guitar effects software that allows you to use your computer
@@ -49,8 +49,10 @@ Requires:	gnuitar
 %description distort2
 Lookup tables for distort2 effect of GNUitar.
 
+%description distort2 -l pl
+Tablice dla efektu GNUitar distort2.
+
 %prep
-rm -rf $RPM_BUILD_ROOT
 %setup -q
 %patch0 -p1
 
@@ -61,6 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=${RPM_BUILD_ROOT}
 
