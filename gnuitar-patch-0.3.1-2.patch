@@ -1,0 +1,31 @@
+Fixes missing trailing NULL in the spawnlp() parameters.
+Essential for Windows version only.
+Use like this:
+
+shell$ patch -d gnuitar-0.3.1 -p1 <patch1
+
+--- gnuitar-0.3.1/src/gui.c	Wed Apr 16 21:42:58 2003
++++ gnuitar-current/src/gui.c	Thu May  1 22:09:25 2003
+@@ -17,9 +17,12 @@
+  * along with this program; if not, write to the Free Software
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  *
+- * $Id$
++ * $Id$
+  *
+  * $Log$
++ * Revision 1.21  2003/05/01 19:09:25  fonin
++ * Bugfix with spawnl() syntax - the last parameter always should be NULL.
++ *
+  * Revision 1.20  2003/04/16 18:42:58  fonin
+  * R_OK macro definition moved to utils.h.
+  *
+@@ -336,7 +339,7 @@
+ 	}
+     }
+     if (strcmp(path, "") != 0) {
+-	if (spawnlp(P_NOWAIT, "start", "start", path) == -1) {
++	if (spawnlp(P_NOWAIT, "start", "start", path, NULL) == -1) {
+ 	    perror("spawn");
+ 	}
+     }

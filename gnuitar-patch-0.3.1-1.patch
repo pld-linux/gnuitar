@@ -1,0 +1,39 @@
+Fixes the compilation error in distort2.c file.
+Use like this:
+
+shell$ patch -d gnuitar-0.3.1 -p1 <patch1
+
+--- gnuitar-0.3.1/src/distort2.c	Thu Apr 17 15:22:00 2003
++++ gnuitar-current/src/distort2.c	Mon Apr 21 12:35:51 2003
+@@ -17,9 +17,12 @@
+  * along with this program; if not, write to the Free Software
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  *
+- * $Id$
++ * $Id$
+  *
+  * $Log$
++ * Revision 1.6  2003/04/21 09:35:51  fonin
++ * Bugfix with missing parameter in strncat(), line 74.
++ *
+  * Revision 1.5  2003/04/17 12:22:00  fonin
+  * More search paths for lookup dir.
+  *
+@@ -71,7 +74,7 @@
+ 
+     strncpy(filename, lookup_dir, 255);
+     strcat(filename,FILESEP);
+-    strncat(filename, "distort2lookup_");
++    strcat(filename, "distort2lookup_");
+     // sprintf(tmp,"%i",sr);
+     strcat(filename, "44100");
+     strncat(filename, tmp, 255);
+@@ -346,7 +349,7 @@
+     ap->r2 = 510;
+     ap->r1 = 1;
+     ap->lowpass = 350;
+-    ap->noisegate = 6000;
++    ap->noisegate = 3000;
+ 
+     RC_setup(10, 1.5, &(ap->fd));
+     RC_set_freq(ap->lowpass, &(ap->fd));
