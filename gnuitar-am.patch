@@ -1,0 +1,13 @@
+--- gnuitar/Makefile.am.old	Sat Jan 10 10:48:11 2004
++++ gnuitar/Makefile.am	Sat Jan 10 10:48:23 2004
+@@ -1,8 +1,8 @@
+ SUBDIRS = src
+ a1dir = $(datadir)/doc/gnuitar/docs
+-a1_DATA = docs
++a1_DATA = docs/*
+ a2dir = $(pkgdatadir)/distort2
+-a2_DATA = distort2
++a2_DATA = distort2/*
+ docdir = $(datadir)/doc/gnuitar
+ doc_DATA = docs/*.html NEWS ChangeLog FAQ AUTHORS COPYING INSTALL README TODO
+ distort2dir = $(pkgdatadir)
