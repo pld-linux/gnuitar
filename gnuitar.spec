@@ -2,7 +2,7 @@ Summary:	Guitar effects processor
 Summary(pl):	Procesor efektów gitarowych
 Name:		gnuitar
 Version:	0.3.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
@@ -22,28 +22,28 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This is a guitar effects software that allows you to use your computer
 as powerful guitar processor. Includes effects:
- - wah-wah
- - sustain
- - two flavours of distortion
- - reverberator, echo, delay
- - tremolo
- - vibrato
- - chorus/flanger
- - phasor
- - noise gate
+- wah-wah
+- sustain
+- two flavours of distortion
+- reverberator, echo, delay
+- tremolo
+- vibrato
+- chorus/flanger
+- phasor
+- noise gate
 
 %description -l pl
 GNUitar pozwala zamieniæ komputer z rozbudowany procesor d¼wiêku i
 efektów gitarowych. Wbudowane efekty:
- - wah-wah (tzw. kaczka)
- - sustain
- - distortion w dwóch rodzajach (tzw. przester)
- - reverberator, echo, delay
- - tremolo
- - vibrato
- - chorus/flanger
- - phasor
- - noise gate
+- wah-wah (tzw. kaczka)
+- sustain
+- distortion w dwóch rodzajach (tzw. przester)
+- reverberator, echo, delay
+- tremolo
+- vibrato
+- chorus/flanger
+- phasor
+- noise gate
 
 %package distort2
 Summary:	Guitar effects processor - distort2 effect
