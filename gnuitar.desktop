@@ -7,6 +7,6 @@ Exec=gnuitar
 Icon=gnuitar.png
 Terminal=false
 Type=Application
-Categories=AudioVideo;
+Categories=GTK;Audio;
 Encoding=UTF-8
 # vi: encoding=utf-8: termencoding=iso-8859-2
