@@ -4,7 +4,7 @@ Name:		gnuitar
 Version:	0.3.1
 Release:	1
 License:	GPL
-Group:		Applications/Multimedia
+Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/gnuitar/%{name}-%{version}.tar.bz2
 # Source0-md5:	8b8375f879191c6c35bd30160f158d7c
 Patch0:		%{name}-am.patch
@@ -43,7 +43,7 @@ efektów gitarowych. Wbudowane efekty:
 %package distort2
 Summary:	Guitar effects processor - distort2 effect
 Summary(pl):	Procesor efektów gitarowych - efekt distort2
-Group:		Applications/Multimedia
+Group:		X11/Applications/Sound
 Requires:	gnuitar
 
 %description distort2
