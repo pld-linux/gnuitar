@@ -5,8 +5,8 @@ Version:	0.3.1
 Release:	1
 License:	GPL
 Group:		Applications/Multimedia
-Source0:	http://ns2.ziet.zhitomir.ua/~fonin/projects/gnuitar/%{name}-%{version}.tar.gz
-# Source0-md5:	32a15f8c6135eb91f0ffa1837c25e9a4
+Source0:	http://dl.sourceforge.net/gnuitar/%{name}-%{version}.tar.bz2
+# Source0-md5:	8b8375f879191c6c35bd30160f158d7c
 Patch0:		%{name}-am.patch
 URL:		http://ns2.ziet.zhitomir.ua/~fonin/downloads.php#gnuitar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
