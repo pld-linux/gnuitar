@@ -2,12 +2,17 @@ Summary:	Guitar effects processor
 Summary(pl):	Procesor efektów gitarowych
 Name:		gnuitar
 Version:	0.3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://dl.sourceforge.net/gnuitar/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
+Source1:	%{name}.desktop
 # Source0-md5:	8b8375f879191c6c35bd30160f158d7c
 Patch0:		%{name}-am.patch
+#http://ns2.ziet.zhitomir.ua/~fonin/projects/gnuitar/patches/patch-0.3.1-1
+Patch1:		%{name}-patch-0.3.1-1.patch
+#http://ns2.ziet.zhitomir.ua/~fonin/projects/gnuitar/patches/patch-0.3.1-2
+Patch2:		%{name}-patch-0.3.1-2.patch
 URL:		http://ns2.ziet.zhitomir.ua/~fonin/downloads.php#gnuitar
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -44,7 +49,7 @@ efektów gitarowych. Wbudowane efekty:
 Summary:	Guitar effects processor - distort2 effect
 Summary(pl):	Procesor efektów gitarowych - efekt distort2
 Group:		X11/Applications/Sound
-Requires:	gnuitar
+Requires:	%{name}
 
 %description distort2
 Lookup tables for distort2 effect of GNUitar.
@@ -55,6 +60,8 @@ Tablice dla efektu GNUitar distort2.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__autoconf}
@@ -63,12 +70,17 @@ Tablice dla efektu GNUitar distort2.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=${RPM_BUILD_ROOT}
 
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{name}.ico $RPM_BUILD_ROOT%{_pixmapsdir}
+
 rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/gnuitar
 rm -f $RPM_BUILD_ROOT%{_datadir}/gnuitar/distort2lookup_*
+rm -rf $RPM_BUILD_ROOT%{_datadir}/gnuitar/win32
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
@@ -77,10 +89,12 @@ rm -rf ${RPM_BUILD_ROOT}
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog FAQ NEWS README TODO
 %attr(755,root,root) %{_bindir}/gnuitar
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.ico
 
 %files distort2
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gen_distort2_lookup
-%dir %{_datadir}/gnuitar
-%dir %{_datadir}/gnuitar/distort2
-%{_datadir}/gnuitar/distort2/*
+%dir %{_datadir}/%{name}
+%dir %{_datadir}/%{name}/distort2
+%{_datadir}/%{name}/distort2/*
