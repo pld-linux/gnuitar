@@ -5,7 +5,7 @@ Comment=Guitar effects processor
 Comment[pl]=Procesor efektów gitarowych
 Exec=gnuitar
 Icon=gnuitar.ico
-Terminal=0
+Terminal=false
 Type=Application
-Categories=AudioVideo
+Categories=AudioVideo;
 # vi: encoding=utf-8: termencoding=iso-8859-2
