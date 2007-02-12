@@ -1,5 +1,5 @@
 Summary:	Guitar effects processor
-Summary(pl):	Procesor efektów gitarowych
+Summary(pl.UTF-8):   Procesor efektÃ³w gitarowych
 Name:		gnuitar
 Version:	0.3.1
 Release:	3
@@ -32,12 +32,12 @@ as powerful guitar processor. Includes effects:
 - phasor
 - noise gate
 
-%description -l pl
-GNUitar pozwala zamieniæ komputer z rozbudowany procesor d¼wiêku i
-efektów gitarowych. Wbudowane efekty:
+%description -l pl.UTF-8
+GNUitar pozwala zamieniÄ‡ komputer z rozbudowany procesor dÅºwiÄ™ku i
+efektÃ³w gitarowych. Wbudowane efekty:
 - wah-wah (tzw. kaczka)
 - sustain
-- distortion w dwóch rodzajach (tzw. przester)
+- distortion w dwÃ³ch rodzajach (tzw. przester)
 - reverberator, echo, delay
 - tremolo
 - vibrato
@@ -47,14 +47,14 @@ efektów gitarowych. Wbudowane efekty:
 
 %package distort2
 Summary:	Guitar effects processor - distort2 effect
-Summary(pl):	Procesor efektów gitarowych - efekt distort2
+Summary(pl.UTF-8):   Procesor efektÃ³w gitarowych - efekt distort2
 Group:		X11/Applications/Sound
 Requires:	%{name}
 
 %description distort2
 Lookup tables for distort2 effect of GNUitar.
 
-%description distort2 -l pl
+%description distort2 -l pl.UTF-8
 Tablice dla efektu GNUitar distort2.
 
 %prep
