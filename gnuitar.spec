@@ -1,5 +1,5 @@
 Summary:	Guitar effects processor
-Summary(pl.UTF-8):   Procesor efektów gitarowych
+Summary(pl.UTF-8):	Procesor efektów gitarowych
 Name:		gnuitar
 Version:	0.3.1
 Release:	3
@@ -47,7 +47,7 @@ efektów gitarowych. Wbudowane efekty:
 
 %package distort2
 Summary:	Guitar effects processor - distort2 effect
-Summary(pl.UTF-8):   Procesor efektów gitarowych - efekt distort2
+Summary(pl.UTF-8):	Procesor efektów gitarowych - efekt distort2
 Group:		X11/Applications/Sound
 Requires:	%{name}
 
