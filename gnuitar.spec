@@ -6,8 +6,8 @@ Release:	3
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-Source1:	%{name}.desktop
 # Source0-md5:	8b8375f879191c6c35bd30160f158d7c
+Source1:	%{name}.desktop
 Patch0:		%{name}-am.patch
 #http://ns2.ziet.zhitomir.ua/~fonin/projects/gnuitar/patches/patch-0.3.1-1
 Patch1:		%{name}-patch-0.3.1-1.patch
