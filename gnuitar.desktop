@@ -4,9 +4,8 @@ Name[pl]=GNUitar
 Comment=Guitar effects processor
 Comment[pl]=Procesor efektów gitarowych
 Exec=gnuitar
-Icon=gnuitar.png
+Icon=gnuitar
 Terminal=false
 Type=Application
 Categories=GTK;Audio;
-Encoding=UTF-8
 # vi: encoding=utf-8: termencoding=iso-8859-2
