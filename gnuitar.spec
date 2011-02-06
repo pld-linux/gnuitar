@@ -83,7 +83,7 @@ rm -f $RPM_BUILD_ROOT%{_datadir}/gnuitar/distort2lookup_*
 rm -rf $RPM_BUILD_ROOT%{_datadir}/gnuitar/win32
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
